@@ -51,6 +51,9 @@ class Board():
         for t in self.final_suit_stacks.values():
             t.display(self.instance.window)
 
+        resetText = settings.SGS_15.render("Press R to reset", True, settings.COLOURS["WHITE"])
+        self.instance.window.blit(resetText, (10, settings.HEIGHT - resetText.get_height() - 10))
+
         self.deck.display(self.instance.window)
 
     def select_stack(self, mouse_pos):

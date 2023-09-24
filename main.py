@@ -43,6 +43,11 @@ class Game():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
+
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r:
+                    self.run()
+            
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if pygame.mouse.get_pressed()[0]:
 
